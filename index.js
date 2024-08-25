@@ -17,6 +17,10 @@ const MONGODB_URI =
 mongoose
   .connect(MONGODB_URI)
   .then(() =>
-    app.listen(PORT, () => console.log(`server is running at port ${PORT}`))
+    app.listen(PORT, () =>
+      console.log(
+        `server is running at port ${PORT} \n.....Database is connected.....`
+      )
+    )
   )
   .catch((error) => console.log(error.message));
